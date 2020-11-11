@@ -1,0 +1,2 @@
+class ShellError(Exception):
+    pass
