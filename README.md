@@ -55,15 +55,18 @@ execute shell command with timeout
 
 ```python
 from easysh import Shell
+from subprocess import TimeoutExpired
 
-# raise subprocess.TimeoutExpired
-await Shell.aexec('python',timeout=3)
+try:
+    await Shell.aexec('python', timeout=3)
+except TimeoutExpired as e:
+    print(e)
+
 ``` 
 
-error handing
+handling error
 
 ```python
-
 from easysh import Shell, ShellError
 
 try:
