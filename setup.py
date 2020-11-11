@@ -8,6 +8,7 @@ setup(
     author='vince',
     author_email='yingjiaxin202@163.com',
     long_description=open('README.md', 'r').read(),
+    long_description_content_type="text/markdown",
     packages={"easysh"},
     install_requires=["chardet"],
     keywords="shell sh",
